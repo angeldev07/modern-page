@@ -91,6 +91,7 @@ body{
     text-decoration: none;
     color: #fff;
     font-size: 1.2rem;
+    position: relative;
     
 }
 
@@ -98,8 +99,9 @@ body{
     content: '';
     background-color: #fff;
     display: block;
+    position: absolute;
     margin-top: .1em;
-    width: 100%;
+    width: 90%;
     height: 1px;
 }
 
@@ -189,7 +191,7 @@ body{
 
 /* Footer */
 .footer{
-    padding: 1em;
+    padding: .5em;
     margin-top: 5rem;
     width: 100%;
     text-align: center;
@@ -203,8 +205,7 @@ body{
 @media screen and (min-width: 800px) {
 
     .nav{
-        height: 5em;
-        padding: 3em 0; 
+        padding: 2em 0; 
     }
 
     .nav-list{
