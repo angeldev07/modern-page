@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #181719;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Wrapper styles*/
+.wrapper{
+    width: 90%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+/* Nav styles */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0; 
+    margin-bottom: 2rem;
+}
+
+/* Logo styles  */
+.logo{
+    display: inline-block;
+    padding: .5em;
+    outline: 1px solid;
+    font-size: .9rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Icons to open and close menu styles */
+
+.hidden-menu{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transform: rotate(-90deg);
+}
+
+
+.menu-active{
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    transform: rotate(0);
+    transition: transform .5s;
+}
+
+/* Nav list styles */
+.nav-list{
+    background-color: #181719;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    height: 100vh;
+    width: 100%;
+    list-style: none;
+    transform: translateX(110%);
+    transition: transform .3s;
+}
+
+.show{
+    transform: translate(0);
+}
+
+/* List item style */
+.nav-link{
+    display: block;
+    padding: .2em;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    
+}
+
+.nav-link:hover::after{
+    content: '';
+    background-color: #fff;
+    display: block;
+    margin-top: .1em;
+    width: 100%;
+    height: 1px;
+}
+
+/* Container and container elements style */
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero_title {
+    padding-bottom: .7em ;
+    font-size: 2.2rem;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+}
+
+.hero-desc{
+    margin-bottom: 1em;
+    width: 70%;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.cta{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 1em;
+    padding: .5em 0;
+    width: max-content;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Card */
+.card{
+    position: relative;
+}
+
+.bg-card{
+    width: 100%;
+}
+
+.subcard{
+    background-color: #181719;
+    position: absolute;
+    bottom: -4.5em;
+    right: 1.5em;
+    padding: 1.5em 3em 2em 2em;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 300px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.subcard-head{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.img-profile{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-right: 1em;
+}
+
+.name{
+    font-size: .8rem;
+}
+
+.job{
+    font-size: .6rem;
+    color: #828282;
+}
+
+.subcard-mssg{
+    padding-top: 1em;
+    font-size: 1.2rem;
+    font-family: 'Lora', sans-serif;
+}
+
+/* Footer */
+.footer{
+    padding: 1em;
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
+    color:  #A9A9A9;;
+}
+
+.footer a{
+    color: inherit;
+}
+
+@media screen and (min-width: 800px) {
+
+    .nav{
+        height: 5em;
+        padding: 3em 0; 
+    }
+
+    .nav-list{
+        flex-direction: row;
+        justify-content: end;
+        position: static;
+        transform: translate(0);
+        height: auto;
+        width: auto;
+        margin-left: auto;
+    }
+
+    .menu-active{
+        display: none;
+    }
+
+    .hero_title{
+        font-size: 4rem;
+    }
+
+    .hero-desc{
+        padding-right: 2em;
+        font-size: 1.3rem;
+        width: 60%;
+    }
+
+}
